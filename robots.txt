@@ -1,5 +1,86 @@
+# General crawlers
 User-agent: *
+Disallow:
 Allow: /wp-json/agentic-markup/v1/feed
 Allow: /wp-json/agentic-markup/v1/index
 
-Sitemap: https://agenticmarkup.com/wp-json/agentic-markup/v1/index
+# OpenAI — ChatGPT, GPT training, search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google — Gemini training and AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Anthropic — Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta — Llama / Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Apple — Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft — Copilot / Bing AI
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Amazon — Alexa / AWS AI
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Common Crawl (used for training many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Bytedance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# Diffbot (AI knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+Sitemap: https://agenticmarkup.com/sitemap.xml
