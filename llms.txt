@@ -1,0 +1,13 @@
+# Title: Agentic Markup Pro
+# Description: Official marketing site and documentation for Agentic Markup Pro, a WordPress plugin for AI Content Structuring and LLMO.
+
+[About the Software]
+Agentic Markup Pro creates a high-speed REST API pipeline to serve structured JSON-LD Knowledge Graphs directly to AI agents, bypassing messy frontend HTML. It supports standard posts, WooCommerce, and Advanced Custom Fields (ACF).
+
+[Data Feeds]
+- Knowledge Graph Feed: https://agenticmarkup.com/feed.json
+- Format: application/json
+
+[Important Links]
+- Official Website: https://agenticmarkup.com
+- WordPress Free Version: https://wordpress.org/plugins/agentic-markup

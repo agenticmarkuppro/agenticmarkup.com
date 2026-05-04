@@ -1,0 +1,50 @@
+{
+  "status": 200,
+  "ai_optimized": true,
+  "data": [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Agentic Markup Pro",
+      "operatingSystem": "WordPress",
+      "applicationCategory": "BusinessApplication",
+      "description": "A WordPress plugin that translates standard pages, Custom Post Types, and Advanced Custom Fields into machine-readable JSON-LD Schema for AI crawlers.",
+      "url": "https://agenticmarkup.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "99.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why Your WordPress Page Builder is Blocking Your AI Search Traffic",
+      "url": "https://agenticmarkup.com/blog/why-your-wordpress-page-builder-is-blocking-your-ai-search-traffic.html",
+      "author": {
+        "@type": "Organization",
+        "name": "Agentic Markup"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "The New SEO Standard: Why Every WordPress Site Needs an llms.txt File",
+      "url": "https://agenticmarkup.com/blog/the-new-seo-standard-why-every-wordpress-site-needs-an-llms-txt-file.html",
+      "author": {
+        "@type": "Organization",
+        "name": "Agentic Markup"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Stop Optimizing for Links. Start Optimizing for AI Answers.",
+      "url": "https://agenticmarkup.com/blog/stop-optimizing-for-links-start-optimizing-for-ai-answers.html",
+      "author": {
+        "@type": "Organization",
+        "name": "Agentic Markup"
+      }
+    }
+  ]
+}

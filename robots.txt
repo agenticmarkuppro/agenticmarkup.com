@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /wp-json/agentic-markup/v1/feed
+Allow: /wp-json/agentic-markup/v1/index
+
+Sitemap: https://agenticmarkup.com/wp-json/agentic-markup/v1/index

@@ -1,0 +1,111 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Agentic Markup Knowledge Graph API",
+    "description": "Retrieves structured JSON-LD data about Agentic Markup Pro software and the latest AI/SEO blog posts.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://agenticmarkup.com"
+    }
+  ],
+  "paths": {
+    "/feed.json": {
+      "get": {
+        "operationId": "getSiteDataFeed",
+        "summary": "Get the AI-optimized JSON-LD data feed",
+        "description": "Fetches a static JSON file containing the site's Knowledge Graph, including software product pricing/details and recent blog articles.",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of the data feed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "ai_optimized": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "data": {
+                      "type": "array",
+                      "description": "An array of Schema.org JSON-LD entities.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "@context": {
+                            "type": "string",
+                            "example": "https://schema.org"
+                          },
+                          "@type": {
+                            "type": "string",
+                            "description": "The Schema.org type, typically 'SoftwareApplication' or 'BlogPosting'."
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "headline": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "operatingSystem": {
+                            "type": "string"
+                          },
+                          "applicationCategory": {
+                            "type": "string"
+                          },
+                          "offers": {
+                            "type": "object",
+                            "properties": {
+                              "@type": {
+                                "type": "string"
+                              },
+                              "price": {
+                                "type": "string"
+                              },
+                              "priceCurrency": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "author": {
+                            "type": "object",
+                            "properties": {
+                              "@type": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "@context",
+                          "@type",
+                          "url"
+                        ],
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
