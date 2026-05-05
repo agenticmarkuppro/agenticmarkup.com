@@ -1,0 +1,10 @@
+{
+    "name": "tailwind-site",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tailwindcss -i ./input.css -o ./style.css --minify"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.0.0"
+    }
+}
