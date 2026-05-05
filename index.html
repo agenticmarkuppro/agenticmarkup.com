@@ -52,7 +52,7 @@
     <link rel="llms" href="https://agenticmarkup.com/llms.txt" />
 
     <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -181,7 +181,8 @@
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn"
-                        class="text-slate-300 hover:text-white focus:outline-none transition-colors">
+                        class="text-slate-300 hover:text-white focus:outline-none transition-colors"
+                        aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -210,772 +211,811 @@
                 Pro</a>
         </div>
     </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-
-                <!-- Hero Text -->
-                <div class="text-left z-10">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-sm font-semibold mb-6">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"></span>
-                        </span>
-                        Optimized for LLMs like ChatGPT, Claude, Gemini and more.
-                    </div>
-                    <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-                        Stop optimizing for links.<br>
-                        <span class="gradient-text">Optimize for Answers.</span>
-                    </h1>
-                    <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-                        Agentic Markup Pro Plugin translates your messy WordPress data into a high-speed,
-                        machine-readable, LLMs-readable Knowledge Graph. Be the cited source when customers ask AI
-                        search engines.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
-                            class="animate-glow bg-gradient-to-r from-brand-blue to-brand-teal text-white font-bold py-4 px-8 rounded-xl hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-teal/25">
-                            Upgrade to Pro
-                        </a>
-                        <a href="#free"
-                            class="glass-card text-white font-bold py-4 px-8 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                            View Free Version
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Visual (Floating Code Window) -->
-                <div class="relative z-10 lg:ml-auto w-full max-w-lg animate-float hidden md:block">
-                    <div class="code-window bg-[#0D1117] rounded-2xl overflow-hidden border border-slate-700">
-                        <!-- Window Header -->
-                        <div class="bg-slate-800/50 px-4 py-3 flex items-center gap-2 border-b border-slate-700/50">
-                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            <div class="ml-2 text-xs text-slate-400 font-mono flex-1 text-center pr-8">
-                                /wp-json/agentic-markup/v1/feed</div>
-                        </div>
-                        <!-- Code Body -->
-                        <div class="p-5 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
-                            <span class="text-pink-400">{</span><br>
-                            &nbsp;&nbsp;<span class="text-brand-teal">"status"</span>: <span
-                                class="text-green-400">200</span>,<br>
-                            &nbsp;&nbsp;<span class="text-brand-teal">"ai_optimized"</span>: <span
-                                class="text-blue-400">true</span>,<br>
-                            &nbsp;&nbsp;<span class="text-brand-teal">"data"</span>: <span
-                                class="text-pink-400">[</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">{</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"@context"</span>: <span
-                                class="text-yellow-200">"https://schema.org"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"@type"</span>: <span
-                                class="text-yellow-200">"Product"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"name"</span>: <span
-                                class="text-yellow-200">"Enterprise SaaS License"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"offers"</span>: <span
-                                class="text-purple-400">{</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                class="text-brand-teal">"@type"</span>: <span
-                                class="text-yellow-200">"Offer"</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                class="text-brand-teal">"price"</span>: <span class="text-green-400">199.00</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                class="text-brand-teal">"availability"</span>: <span
-                                class="text-yellow-200">"InStock"</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">}</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">}</span><br>
-                            &nbsp;&nbsp;<span class="text-pink-400">]</span><br>
-                            <span class="text-pink-400">}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section: Agentic Markup Pro -->
-    <section id="how-it-works" class="py-24 bg-slate-900 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <!-- Section Header -->
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-brand-teal font-normal tracking-wider uppercase text-sm mb-4">The Technical Architecture
-                </h2>
-                <p class="text-4xl md:text-5xl font-normal text-white leading-tight mb-6">How the Agentic Markup Pro
-                    Plugin Works</p>
-                <p class="text-lg text-slate-400 max-w-3xl mx-auto">Agentic Markup Pro doesn't just add meta tags. It
-                    builds a dedicated,
-                    high-speed data pipeline that translates your complex WordPress database into pure AI signal.</p>
-            </div>
-
-            <!-- Feature 1: Deep Data Mapping -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                <div>
-                    <!-- Icon and Header Inline -->
-                    <div class="flex items-center mb-6">
+                    <!-- Hero Text -->
+                    <div class="text-left z-10">
                         <div
-                            class="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-blue/20 text-brand-blue mr-4 flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-sm font-semibold mb-6">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"></span>
+                            </span>
+                            Optimized for LLMs like ChatGPT, Claude, Gemini and more.
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
+                            Stop optimizing for links.<br>
+                            <span class="gradient-text">Optimize for Answers.</span>
+                        </h1>
+                        <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+                            Agentic Markup Pro Plugin translates your messy WordPress data into a high-speed,
+                            machine-readable, LLMs-readable Knowledge Graph. Be the cited source when customers ask AI
+                            search engines.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
+                                class="animate-glow bg-gradient-to-r from-brand-blue to-brand-teal text-white font-bold py-4 px-8 rounded-xl hover:scale-105 transition-transform duration-300 shadow-lg shadow-brand-teal/25">
+                                Upgrade to Pro
+                            </a>
+                            <!--<a href="#free"
+                                class="glass-card text-white font-bold py-4 px-8 rounded-xl hover:bg-white/10 transition-colors duration-300">
+                                View Free Version
+                            </a>-->
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual (Floating Code Window) -->
+                    <div class="relative z-10 lg:ml-auto w-full max-w-lg animate-float hidden md:block">
+                        <div class="code-window bg-[#0D1117] rounded-2xl overflow-hidden border border-slate-700">
+                            <!-- Window Header -->
+                            <div class="bg-slate-800/50 px-4 py-3 flex items-center gap-2 border-b border-slate-700/50">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                <div class="ml-2 text-xs text-slate-400 font-mono flex-1 text-center pr-8">
+                                    /wp-json/agentic-markup/v1/feed</div>
+                            </div>
+                            <!-- Code Body -->
+                            <div class="p-5 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
+                                <span class="text-pink-400">{</span><br>
+                                &nbsp;&nbsp;<span class="text-brand-teal">"status"</span>: <span
+                                    class="text-green-400">200</span>,<br>
+                                &nbsp;&nbsp;<span class="text-brand-teal">"ai_optimized"</span>: <span
+                                    class="text-blue-400">true</span>,<br>
+                                &nbsp;&nbsp;<span class="text-brand-teal">"data"</span>: <span
+                                    class="text-pink-400">[</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">{</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"@context"</span>:
+                                <span class="text-yellow-200">"https://schema.org"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"@type"</span>: <span
+                                    class="text-yellow-200">"Product"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"name"</span>: <span
+                                    class="text-yellow-200">"Enterprise SaaS License"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-brand-teal">"offers"</span>: <span
+                                    class="text-purple-400">{</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    class="text-brand-teal">"@type"</span>: <span
+                                    class="text-yellow-200">"Offer"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    class="text-brand-teal">"price"</span>: <span
+                                    class="text-green-400">199.00</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    class="text-brand-teal">"availability"</span>: <span
+                                    class="text-yellow-200">"InStock"</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">}</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300">}</span><br>
+                                &nbsp;&nbsp;<span class="text-pink-400">]</span><br>
+                                <span class="text-pink-400">}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section: Agentic Markup Pro -->
+        <section id="how-it-works" class="py-24 bg-slate-900 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-4xl mx-auto mb-20">
+                    <h2 class="text-brand-teal font-normal tracking-wider uppercase text-sm mb-4">The Technical
+                        Architecture
+                    </h2>
+                    <p class="text-4xl md:text-5xl font-normal text-white leading-tight mb-6">How the Agentic Markup Pro
+                        Plugin Works</p>
+                    <p class="text-lg text-slate-400 max-w-3xl mx-auto">Agentic Markup Pro doesn't just add meta tags.
+                        It
+                        builds a dedicated,
+                        high-speed data pipeline that translates your complex WordPress database into pure AI signal.
+                    </p>
+                </div>
+
+                <!-- Feature 1: Deep Data Mapping -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div>
+                        <!-- Icon and Header Inline -->
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-blue/20 text-brand-blue mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-normal text-white">1. Deep Database & CPT Mapping</h3>
+                        </div>
+
+                        <p class="text-slate-400 text-lg mb-6">Basic schema plugins only read standard WordPress posts.
+                            The
+                            Pro engine digs deeper, automatically mapping your custom architecture.</p>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Advanced Custom Fields (ACF) Integration: Instantly exposes deeply nested ACF
+                                    data—like software specs, real estate listings, or team hierarchies—to AI
+                                    crawlers.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Custom Post Type (CPT) Support: Translates complex, non-standard post types
+                                    directly
+                                    into perfectly validated Schema.org entities.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-teal/20 rounded-2xl transform translate-x-4 translate-y-4 -z-10">
+                        </div>
+                        <!-- Inline SVG: ACF Mapping -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
+                            class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
+                            <defs>
+                                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2" />
+                                    <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.8" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="800" height="450" fill="#0f172a" />
+                            <rect width="800" height="40" fill="#1e293b" />
+                            <circle cx="25" cy="20" r="6" fill="#ef4444" />
+                            <circle cx="45" cy="20" r="6" fill="#eab308" />
+                            <circle cx="65" cy="20" r="6" fill="#22c55e" />
+                            <text x="50" y="85" fill="#94a3b8" font-family="monospace" font-size="14">WP: Advanced
+                                Custom
+                                Fields</text>
+                            <rect x="50" y="100" width="280" height="280" rx="8" fill="#1e293b" stroke="#334155"
+                                stroke-width="1" />
+                            <rect x="70" y="130" width="240" height="40" rx="4" fill="#0f172a" />
+                            <text x="85" y="155" fill="#e2e8f0" font-family="sans-serif" font-size="14">Product Price:
+                                $99.00</text>
+                            <circle cx="310" cy="150" r="6" fill="#3b82f6" />
+                            <rect x="70" y="190" width="240" height="40" rx="4" fill="#0f172a" />
+                            <text x="85" y="215" fill="#e2e8f0" font-family="sans-serif" font-size="14">Review Rating:
+                                4.8</text>
+                            <circle cx="310" cy="210" r="6" fill="#3b82f6" />
+                            <rect x="70" y="250" width="240" height="40" rx="4" fill="#0f172a" />
+                            <text x="85" y="275" fill="#e2e8f0" font-family="sans-serif" font-size="14">Author:
+                                Admin</text>
+                            <circle cx="310" cy="270" r="6" fill="#3b82f6" />
+                            <path d="M 310 150 C 400 150 400 130 490 130" fill="none" stroke="url(#lineGrad)"
+                                stroke-width="3" stroke-dasharray="6 4" />
+                            <path d="M 310 210 C 400 210 400 210 490 210" fill="none" stroke="url(#lineGrad)"
+                                stroke-width="3" stroke-dasharray="6 4" />
+                            <path d="M 310 270 C 400 270 400 290 490 290" fill="none" stroke="url(#lineGrad)"
+                                stroke-width="3" stroke-dasharray="6 4" />
+                            <text x="490" y="85" fill="#14b8a6" font-family="monospace" font-size="14">AI Knowledge
+                                Graph
+                                (JSON-LD)</text>
+                            <rect x="490" y="100" width="260" height="280" rx="8" fill="#020617" stroke="#14b8a6"
+                                stroke-width="1" stroke-opacity="0.3" />
+                            <text x="510" y="135" fill="#14b8a6" font-family="monospace" font-size="14">"price":
+                                "99.00",</text>
+                            <text x="510" y="215" fill="#14b8a6" font-family="monospace" font-size="14">"ratingValue":
+                                "4.8",</text>
+                            <text x="510" y="295" fill="#14b8a6" font-family="monospace" font-size="14">"author":
+                                "Organization",</text>
+                            <circle cx="490" cy="130" r="6" fill="#14b8a6" />
+                            <circle cx="490" cy="210" r="6" fill="#14b8a6" />
+                            <circle cx="490" cy="290" r="6" fill="#14b8a6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Feature 2: The REST Pipeline -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div class="order-2 lg:order-1 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-brand-teal/20 to-brand-blue/20 rounded-2xl transform -translate-x-4 translate-y-4 -z-10">
+                        </div>
+                        <!-- Inline SVG: Pipeline Diagram -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
+                            class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
+                            <defs>
+                                <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#0ea5e9" />
+                                    <stop offset="100%" stop-color="#14b8a6" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="800" height="450" fill="#0f172a" />
+                            <rect x="50" y="175" width="160" height="100" rx="12" fill="#1e293b" stroke="#334155"
+                                stroke-width="2" />
+                            <text x="130" y="225" fill="#f8fafc" font-family="sans-serif" font-size="16"
+                                text-anchor="middle">WP Database</text>
+                            <text x="130" y="245" fill="#64748b" font-family="sans-serif" font-size="12"
+                                text-anchor="middle">(ACF, Posts, CPTs)</text>
+                            <rect x="320" y="60" width="160" height="100" rx="12" fill="#0f172a" stroke="#ef4444"
+                                stroke-width="2" stroke-dasharray="4 4" opacity="0.5" />
+                            <text x="400" y="105" fill="#ef4444" font-family="sans-serif" font-size="16"
+                                text-anchor="middle">Page Builder</text>
+                            <text x="400" y="125" fill="#ef4444" font-family="sans-serif" font-size="12"
+                                text-anchor="middle">(Heavy HTML/CSS)</text>
+                            <rect x="320" y="280" width="160" height="100" rx="12" fill="#020617"
+                                stroke="url(#successGrad)" stroke-width="3" />
+                            <text x="400" y="325" fill="#14b8a6" font-family="sans-serif" font-size="16"
+                                text-anchor="middle">Agentic API</text>
+                            <text x="400" y="345" fill="#14b8a6" font-family="sans-serif" font-size="12"
+                                text-anchor="middle">(/v1/feed JSON)</text>
+                            <rect x="590" y="175" width="160" height="100" rx="12" fill="#1e293b" stroke="#334155"
+                                stroke-width="2" />
+                            <text x="670" y="225" fill="#f8fafc" font-family="sans-serif" font-size="16"
+                                text-anchor="middle">AI Crawler</text>
+                            <text x="670" y="245" fill="#64748b" font-family="sans-serif" font-size="12"
+                                text-anchor="middle">(OpenAI, Gemini)</text>
+                            <path d="M 210 200 C 260 200 260 110 310 110" fill="none" stroke="#ef4444" stroke-width="3"
+                                stroke-dasharray="5 5" opacity="0.5" />
+                            <path d="M 490 110 C 540 110 540 200 580 200" fill="none" stroke="#ef4444" stroke-width="3"
+                                stroke-dasharray="5 5" opacity="0.5" />
+                            <line x1="250" y1="145" x2="270" y2="165" stroke="#ef4444" stroke-width="3" />
+                            <line x1="270" y1="145" x2="250" y2="165" stroke="#ef4444" stroke-width="3" />
+                            <path d="M 210 250 C 260 250 260 330 310 330" fill="none" stroke="url(#successGrad)"
+                                stroke-width="4" />
+                            <path d="M 490 330 C 540 330 540 250 580 250" fill="none" stroke="url(#successGrad)"
+                                stroke-width="4" />
+                            <polygon points="580,250 565,240 565,260" fill="#14b8a6" />
+                        </svg>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <!-- Icon and Header Inline -->
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-teal mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-normal text-white">2. Bypassing the Visual Web</h3>
+                        </div>
+
+                        <p class="text-slate-400 text-lg mb-6">Stop forcing bots to parse heavy page builder code.
+                            Agentic
+                            Markup Pro creates a dedicated, high-speed REST API endpoint
+                            (`/wp-json/agentic-markup/v1/feed`).</p>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>100% Data Signal: Serves pure JSON-LD payloads. No CSS, no JavaScript, no visual
+                                    bloat.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Frictionless Ingestion: Allows models like OpenAI’s SearchBot and Google AI to
+                                    index
+                                    your answers with zero compute penalty, drastically increasing your citation
+                                    rate.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Omni-Channel Discovery -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <!-- Icon and Header Inline -->
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-normal text-white">3. Automated Omni-Channel Discovery</h3>
+                        </div>
+
+                        <p class="text-slate-400 text-lg mb-6">Building the pipeline is useless if bots can't find it.
+                            The
+                            Pro version fully automates the industry's newest AI routing protocols directly from your
+                            WordPress dashboard.</p>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Dynamic `llms.txt` Generation: Uses advanced rewrite rules to auto-generate the
+                                    emerging standard file at your root domain, guiding polite bots to your data.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Custom GPT Integration (`openapi.json`): Automatically generates OpenAPI specs,
+                                    allowing enterprise teams and agencies to plug your WordPress database directly into
+                                    private Custom GPTs.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-brand-teal/20 rounded-2xl transform translate-x-4 translate-y-4 -z-10">
+                        </div>
+                        <!-- Inline SVG: Code Discovery -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
+                            class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
+                            <rect width="800" height="450" fill="#020617" />
+                            <rect width="800" height="50" fill="#0f172a" />
+                            <rect x="0" y="0" width="200" height="50" fill="#020617" stroke-top="#14b8a6" />
+                            <rect x="0" y="0" width="200" height="2" fill="#14b8a6" />
+                            <text x="60" y="30" fill="#e2e8f0" font-family="sans-serif" font-size="14">llms.txt</text>
+                            <rect x="200" y="0" width="200" height="50" fill="#0f172a" />
+                            <text x="250" y="30" fill="#64748b" font-family="sans-serif"
+                                font-size="14">openapi.json</text>
+                            <text x="30" y="90" fill="#64748b" font-family="monospace" font-size="15">1</text>
+                            <text x="60" y="90" fill="#14b8a6" font-family="monospace" font-size="15"># Title: Agentic
+                                Markup Knowledge Base</text>
+                            <text x="30" y="120" fill="#64748b" font-family="monospace" font-size="15">2</text>
+                            <text x="60" y="120" fill="#14b8a6" font-family="monospace" font-size="15"># Description:
+                                Standardized AI Index</text>
+                            <text x="30" y="150" fill="#64748b" font-family="monospace" font-size="15">3</text>
+                            <text x="30" y="180" fill="#64748b" font-family="monospace" font-size="15">4</text>
+                            <text x="60" y="180" fill="#38bdf8" font-family="monospace" font-size="15">[Data
+                                Feeds]</text>
+                            <text x="30" y="210" fill="#64748b" font-family="monospace" font-size="15">5</text>
+                            <text x="60" y="210" fill="#e2e8f0" font-family="monospace" font-size="15">- URL:
+                                https://yoursite.com/wp-json/agentic/feed</text>
+                            <text x="30" y="240" fill="#64748b" font-family="monospace" font-size="15">6</text>
+                            <text x="60" y="240" fill="#e2e8f0" font-family="monospace" font-size="15">- Format:
+                                application/json</text>
+                            <text x="30" y="270" fill="#64748b" font-family="monospace" font-size="15">7</text>
+                            <text x="30" y="300" fill="#64748b" font-family="monospace" font-size="15">8</text>
+                            <text x="60" y="300" fill="#38bdf8" font-family="monospace" font-size="15">[OpenAPI
+                                Spec]</text>
+                            <text x="30" y="330" fill="#64748b" font-family="monospace" font-size="15">9</text>
+                            <text x="60" y="330" fill="#e2e8f0" font-family="monospace" font-size="15">- URL:
+                                https://yoursite.com/openapi.json</text>
+                            <rect x="60" y="195" width="460" height="20" fill="#14b8a6" opacity="0.1" />
+                            <rect x="60" y="315" width="350" height="20" fill="#14b8a6" opacity="0.1" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Feature 4: The Command Center -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-24">
+                    <div class="order-2 lg:order-1 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-brand-blue/20 rounded-2xl transform -translate-x-4 translate-y-4 -z-10">
+                        </div>
+                        <!-- Inline SVG: Admin Dashboard & Donut -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
+                            class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
+                            <!-- Background -->
+                            <rect width="800" height="450" fill="#0f172a" />
+
+                            <!-- WP-Style Sidebar -->
+                            <rect x="0" y="0" width="180" height="450" fill="#020617" />
+                            <rect x="20" y="30" width="140" height="20" rx="4" fill="#1e293b" />
+                            <rect x="20" y="80" width="140" height="15" rx="4" fill="#334155" />
+                            <rect x="20" y="110" width="140" height="15" rx="4" fill="#1e293b" />
+                            <rect x="20" y="140" width="140" height="15" rx="4" fill="#1e293b" />
+
+                            <!-- Main Dashboard Header -->
+                            <text x="220" y="60" fill="#f8fafc" font-family="sans-serif" font-size="22">Agentic Markup
+                                Settings</text>
+                            <rect x="220" y="85" width="540" height="1" fill="#334155" />
+
+                            <!-- Widget 1: Visual Donut Chart -->
+                            <rect x="220" y="110" width="250" height="300" rx="12" fill="#1e293b" stroke="#334155"
+                                stroke-width="1" />
+                            <text x="240" y="145" fill="#94a3b8" font-family="sans-serif" font-size="14"
+                                text-transform="uppercase" letter-spacing="1">AI Readiness</text>
+
+                            <!-- Donut Base -->
+                            <circle cx="345" cy="240" r="70" fill="none" stroke="#0f172a" stroke-width="20" />
+                            <!-- Donut Progress (85% of circumference 440 = 374) -->
+                            <circle cx="345" cy="240" r="70" fill="none" stroke="#14b8a6" stroke-width="20"
+                                stroke-dasharray="374 440" transform="rotate(-90 345 240)" stroke-linecap="round" />
+
+                            <!-- Donut Text -->
+                            <text x="345" y="235" fill="#f8fafc" font-family="sans-serif" font-size="28"
+                                text-anchor="middle">85%</text>
+                            <text x="345" y="260" fill="#14b8a6" font-family="sans-serif" font-size="14"
+                                text-anchor="middle">Optimized</text>
+
+                            <!-- Widget 2: Configurable Options -->
+                            <rect x="490" y="110" width="270" height="300" rx="12" fill="#1e293b" stroke="#334155"
+                                stroke-width="1" />
+                            <text x="510" y="145" fill="#94a3b8" font-family="sans-serif" font-size="14"
+                                text-transform="uppercase" letter-spacing="1">Global Injection</text>
+
+                            <!-- Toggle 1 -->
+                            <rect x="510" y="180" width="230" height="50" rx="8" fill="#0f172a" />
+                            <text x="525" y="210" fill="#e2e8f0" font-family="sans-serif" font-size="13">Auto-Inject
+                                HTML
+                                Headers</text>
+                            <rect x="690" y="193" width="36" height="20" rx="10" fill="#14b8a6" />
+                            <circle cx="716" cy="203" r="7" fill="#ffffff" />
+
+                            <!-- Toggle 2 -->
+                            <rect x="510" y="240" width="230" height="50" rx="8" fill="#0f172a" />
+                            <text x="525" y="270" fill="#e2e8f0" font-family="sans-serif" font-size="13">Enable API
+                                Pipeline</text>
+                            <rect x="690" y="253" width="36" height="20" rx="10" fill="#14b8a6" />
+                            <circle cx="716" cy="263" r="7" fill="#ffffff" />
+
+                            <!-- Toggle 3 -->
+                            <rect x="510" y="300" width="230" height="50" rx="8" fill="#0f172a" />
+                            <text x="525" y="330" fill="#e2e8f0" font-family="sans-serif" font-size="13">Map Complex
+                                CPTs</text>
+                            <rect x="690" y="313" width="36" height="20" rx="10" fill="#14b8a6" />
+                            <circle cx="716" cy="323" r="7" fill="#ffffff" />
+                        </svg>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <!-- Icon and Header Inline -->
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-normal text-white">4. The AI Command Center</h3>
+                        </div>
+
+                        <p class="text-slate-400 text-lg mb-6">You don't need to be a developer to build an enterprise
+                            data
+                            pipeline. The Pro dashboard gives you total visual control over your AI SEO strategy
+                            directly
+                            from WordPress.</p>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Automated Frontend Injection: Seamlessly drops the required AI discovery tags into
+                                    your site's HTML header. Zero coding required, and it never breaks your visual
+                                    theme.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Visual Health Dashboard: Monitor your exact AI readiness score with real-time
+                                    donut
+                                    charts that calculate your total Knowledge Graph coverage and validation
+                                    status.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Discovery Architecture -->
+        <section id="discovery" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl text-white mb-6">The Omni-Channel Discovery Engine</h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        We don't just build the API; we guarantee that AI agents find it. Agentic Markup Pro utilizes a
+                        4-pillar architecture to alert passing crawlers.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-brand-blue group-hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all">
+                            <span class="text-brand-blue font-mono font-bold text-xl">&lt;/&gt;</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Frontend HTML</h3>
+                        <p class="text-slate-400 leading-relaxed">Injects <code>&lt;link rel="alternate"&gt;</code> tags
+                            so
+                            open-web bots instantly route to your JSON feed.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-brand-teal group-hover:shadow-[0_0_20px_rgba(20,184,166,0.3)] transition-all">
+                            <svg class="w-7 h-7 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-normal text-white">1. Deep Database & CPT Mapping</h3>
+                        <h3 class="text-xl font-bold text-white mb-3">llms.txt Standard</h3>
+                        <p class="text-slate-400 leading-relaxed">Automatically generates the emerging
+                            <code>/llms.txt</code> file at your root domain to instruct AI agents.
+                        </p>
                     </div>
-
-                    <p class="text-slate-400 text-lg mb-6">Basic schema plugins only read standard WordPress posts. The
-                        Pro engine digs deeper, automatically mapping your custom architecture.</p>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Advanced Custom Fields (ACF) Integration: Instantly exposes deeply nested ACF
-                                data—like software specs, real estate listings, or team hierarchies—to AI
-                                crawlers.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Custom Post Type (CPT) Support: Translates complex, non-standard post types directly
-                                into perfectly validated Schema.org entities.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative z-10">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-brand-teal/20 rounded-2xl transform translate-x-4 translate-y-4 -z-10">
-                    </div>
-                    <!-- Inline SVG: ACF Mapping -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
-                        class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
-                        <defs>
-                            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2" />
-                                <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.8" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="800" height="450" fill="#0f172a" />
-                        <rect width="800" height="40" fill="#1e293b" />
-                        <circle cx="25" cy="20" r="6" fill="#ef4444" />
-                        <circle cx="45" cy="20" r="6" fill="#eab308" />
-                        <circle cx="65" cy="20" r="6" fill="#22c55e" />
-                        <text x="50" y="85" fill="#94a3b8" font-family="monospace" font-size="14">WP: Advanced Custom
-                            Fields</text>
-                        <rect x="50" y="100" width="280" height="280" rx="8" fill="#1e293b" stroke="#334155"
-                            stroke-width="1" />
-                        <rect x="70" y="130" width="240" height="40" rx="4" fill="#0f172a" />
-                        <text x="85" y="155" fill="#e2e8f0" font-family="sans-serif" font-size="14">Product Price:
-                            $99.00</text>
-                        <circle cx="310" cy="150" r="6" fill="#3b82f6" />
-                        <rect x="70" y="190" width="240" height="40" rx="4" fill="#0f172a" />
-                        <text x="85" y="215" fill="#e2e8f0" font-family="sans-serif" font-size="14">Review Rating:
-                            4.8</text>
-                        <circle cx="310" cy="210" r="6" fill="#3b82f6" />
-                        <rect x="70" y="250" width="240" height="40" rx="4" fill="#0f172a" />
-                        <text x="85" y="275" fill="#e2e8f0" font-family="sans-serif" font-size="14">Author: Admin</text>
-                        <circle cx="310" cy="270" r="6" fill="#3b82f6" />
-                        <path d="M 310 150 C 400 150 400 130 490 130" fill="none" stroke="url(#lineGrad)"
-                            stroke-width="3" stroke-dasharray="6 4" />
-                        <path d="M 310 210 C 400 210 400 210 490 210" fill="none" stroke="url(#lineGrad)"
-                            stroke-width="3" stroke-dasharray="6 4" />
-                        <path d="M 310 270 C 400 270 400 290 490 290" fill="none" stroke="url(#lineGrad)"
-                            stroke-width="3" stroke-dasharray="6 4" />
-                        <text x="490" y="85" fill="#14b8a6" font-family="monospace" font-size="14">AI Knowledge Graph
-                            (JSON-LD)</text>
-                        <rect x="490" y="100" width="260" height="280" rx="8" fill="#020617" stroke="#14b8a6"
-                            stroke-width="1" stroke-opacity="0.3" />
-                        <text x="510" y="135" fill="#14b8a6" font-family="monospace" font-size="14">"price":
-                            "99.00",</text>
-                        <text x="510" y="215" fill="#14b8a6" font-family="monospace" font-size="14">"ratingValue":
-                            "4.8",</text>
-                        <text x="510" y="295" fill="#14b8a6" font-family="monospace" font-size="14">"author":
-                            "Organization",</text>
-                        <circle cx="490" cy="130" r="6" fill="#14b8a6" />
-                        <circle cx="490" cy="210" r="6" fill="#14b8a6" />
-                        <circle cx="490" cy="290" r="6" fill="#14b8a6" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Feature 2: The REST Pipeline -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                <div class="order-2 lg:order-1 relative z-10">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-brand-teal/20 to-brand-blue/20 rounded-2xl transform -translate-x-4 translate-y-4 -z-10">
-                    </div>
-                    <!-- Inline SVG: Pipeline Diagram -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
-                        class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
-                        <defs>
-                            <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#0ea5e9" />
-                                <stop offset="100%" stop-color="#14b8a6" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="800" height="450" fill="#0f172a" />
-                        <rect x="50" y="175" width="160" height="100" rx="12" fill="#1e293b" stroke="#334155"
-                            stroke-width="2" />
-                        <text x="130" y="225" fill="#f8fafc" font-family="sans-serif" font-size="16"
-                            text-anchor="middle">WP Database</text>
-                        <text x="130" y="245" fill="#64748b" font-family="sans-serif" font-size="12"
-                            text-anchor="middle">(ACF, Posts, CPTs)</text>
-                        <rect x="320" y="60" width="160" height="100" rx="12" fill="#0f172a" stroke="#ef4444"
-                            stroke-width="2" stroke-dasharray="4 4" opacity="0.5" />
-                        <text x="400" y="105" fill="#ef4444" font-family="sans-serif" font-size="16"
-                            text-anchor="middle">Page Builder</text>
-                        <text x="400" y="125" fill="#ef4444" font-family="sans-serif" font-size="12"
-                            text-anchor="middle">(Heavy HTML/CSS)</text>
-                        <rect x="320" y="280" width="160" height="100" rx="12" fill="#020617" stroke="url(#successGrad)"
-                            stroke-width="3" />
-                        <text x="400" y="325" fill="#14b8a6" font-family="sans-serif" font-size="16"
-                            text-anchor="middle">Agentic API</text>
-                        <text x="400" y="345" fill="#14b8a6" font-family="sans-serif" font-size="12"
-                            text-anchor="middle">(/v1/feed JSON)</text>
-                        <rect x="590" y="175" width="160" height="100" rx="12" fill="#1e293b" stroke="#334155"
-                            stroke-width="2" />
-                        <text x="670" y="225" fill="#f8fafc" font-family="sans-serif" font-size="16"
-                            text-anchor="middle">AI Crawler</text>
-                        <text x="670" y="245" fill="#64748b" font-family="sans-serif" font-size="12"
-                            text-anchor="middle">(OpenAI, Gemini)</text>
-                        <path d="M 210 200 C 260 200 260 110 310 110" fill="none" stroke="#ef4444" stroke-width="3"
-                            stroke-dasharray="5 5" opacity="0.5" />
-                        <path d="M 490 110 C 540 110 540 200 580 200" fill="none" stroke="#ef4444" stroke-width="3"
-                            stroke-dasharray="5 5" opacity="0.5" />
-                        <line x1="250" y1="145" x2="270" y2="165" stroke="#ef4444" stroke-width="3" />
-                        <line x1="270" y1="145" x2="250" y2="165" stroke="#ef4444" stroke-width="3" />
-                        <path d="M 210 250 C 260 250 260 330 310 330" fill="none" stroke="url(#successGrad)"
-                            stroke-width="4" />
-                        <path d="M 490 330 C 540 330 540 250 580 250" fill="none" stroke="url(#successGrad)"
-                            stroke-width="4" />
-                        <polygon points="580,250 565,240 565,260" fill="#14b8a6" />
-                    </svg>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <!-- Icon and Header Inline -->
-                    <div class="flex items-center mb-6">
+                    <!-- Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
                         <div
-                            class="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-teal mr-4 flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-normal text-white">2. Bypassing the Visual Web</h3>
-                    </div>
-
-                    <p class="text-slate-400 text-lg mb-6">Stop forcing bots to parse heavy page builder code. Agentic
-                        Markup Pro creates a dedicated, high-speed REST API endpoint
-                        (`/wp-json/agentic-markup/v1/feed`).</p>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>100% Data Signal: Serves pure JSON-LD payloads. No CSS, no JavaScript, no visual
-                                bloat.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-blue mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Frictionless Ingestion: Allows models like OpenAI’s SearchBot and Google AI to index
-                                your answers with zero compute penalty, drastically increasing your citation
-                                rate.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 3: Omni-Channel Discovery -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <!-- Icon and Header Inline -->
-                    <div class="flex items-center mb-6">
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 mr-4 flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+                            class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-purple-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all">
+                            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-normal text-white">3. Automated Omni-Channel Discovery</h3>
+                        <h3 class="text-xl font-bold text-white mb-3">robots.txt Directives</h3>
+                        <p class="text-slate-400 leading-relaxed">Injects automated sitemap indexing rules specifically
+                            tailored for your API endpoints.</p>
                     </div>
-
-                    <p class="text-slate-400 text-lg mb-6">Building the pipeline is useless if bots can't find it. The
-                        Pro version fully automates the industry's newest AI routing protocols directly from your
-                        WordPress dashboard.</p>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Dynamic `llms.txt` Generation: Uses advanced rewrite rules to auto-generate the
-                                emerging standard file at your root domain, guiding polite bots to your data.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-brand-teal mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Custom GPT Integration (`openapi.json`): Automatically generates OpenAPI specs,
-                                allowing enterprise teams and agencies to plug your WordPress database directly into
-                                private Custom GPTs.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative z-10">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-brand-teal/20 rounded-2xl transform translate-x-4 translate-y-4 -z-10">
-                    </div>
-                    <!-- Inline SVG: Code Discovery -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
-                        class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
-                        <rect width="800" height="450" fill="#020617" />
-                        <rect width="800" height="50" fill="#0f172a" />
-                        <rect x="0" y="0" width="200" height="50" fill="#020617" stroke-top="#14b8a6" />
-                        <rect x="0" y="0" width="200" height="2" fill="#14b8a6" />
-                        <text x="60" y="30" fill="#e2e8f0" font-family="sans-serif" font-size="14">llms.txt</text>
-                        <rect x="200" y="0" width="200" height="50" fill="#0f172a" />
-                        <text x="250" y="30" fill="#64748b" font-family="sans-serif" font-size="14">openapi.json</text>
-                        <text x="30" y="90" fill="#64748b" font-family="monospace" font-size="15">1</text>
-                        <text x="60" y="90" fill="#14b8a6" font-family="monospace" font-size="15"># Title: Agentic
-                            Markup Knowledge Base</text>
-                        <text x="30" y="120" fill="#64748b" font-family="monospace" font-size="15">2</text>
-                        <text x="60" y="120" fill="#14b8a6" font-family="monospace" font-size="15"># Description:
-                            Standardized AI Index</text>
-                        <text x="30" y="150" fill="#64748b" font-family="monospace" font-size="15">3</text>
-                        <text x="30" y="180" fill="#64748b" font-family="monospace" font-size="15">4</text>
-                        <text x="60" y="180" fill="#38bdf8" font-family="monospace" font-size="15">[Data Feeds]</text>
-                        <text x="30" y="210" fill="#64748b" font-family="monospace" font-size="15">5</text>
-                        <text x="60" y="210" fill="#e2e8f0" font-family="monospace" font-size="15">- URL:
-                            https://yoursite.com/wp-json/agentic/feed</text>
-                        <text x="30" y="240" fill="#64748b" font-family="monospace" font-size="15">6</text>
-                        <text x="60" y="240" fill="#e2e8f0" font-family="monospace" font-size="15">- Format:
-                            application/json</text>
-                        <text x="30" y="270" fill="#64748b" font-family="monospace" font-size="15">7</text>
-                        <text x="30" y="300" fill="#64748b" font-family="monospace" font-size="15">8</text>
-                        <text x="60" y="300" fill="#38bdf8" font-family="monospace" font-size="15">[OpenAPI Spec]</text>
-                        <text x="30" y="330" fill="#64748b" font-family="monospace" font-size="15">9</text>
-                        <text x="60" y="330" fill="#e2e8f0" font-family="monospace" font-size="15">- URL:
-                            https://yoursite.com/openapi.json</text>
-                        <rect x="60" y="195" width="460" height="20" fill="#14b8a6" opacity="0.1" />
-                        <rect x="60" y="315" width="350" height="20" fill="#14b8a6" opacity="0.1" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Feature 4: The Command Center -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-24">
-                <div class="order-2 lg:order-1 relative z-10">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-brand-blue/20 rounded-2xl transform -translate-x-4 translate-y-4 -z-10">
-                    </div>
-                    <!-- Inline SVG: Admin Dashboard & Donut -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"
-                        class="rounded-2xl border border-white/10 shadow-2xl bg-slate-800 w-full object-cover aspect-video">
-                        <!-- Background -->
-                        <rect width="800" height="450" fill="#0f172a" />
-
-                        <!-- WP-Style Sidebar -->
-                        <rect x="0" y="0" width="180" height="450" fill="#020617" />
-                        <rect x="20" y="30" width="140" height="20" rx="4" fill="#1e293b" />
-                        <rect x="20" y="80" width="140" height="15" rx="4" fill="#334155" />
-                        <rect x="20" y="110" width="140" height="15" rx="4" fill="#1e293b" />
-                        <rect x="20" y="140" width="140" height="15" rx="4" fill="#1e293b" />
-
-                        <!-- Main Dashboard Header -->
-                        <text x="220" y="60" fill="#f8fafc" font-family="sans-serif" font-size="22">Agentic Markup
-                            Settings</text>
-                        <rect x="220" y="85" width="540" height="1" fill="#334155" />
-
-                        <!-- Widget 1: Visual Donut Chart -->
-                        <rect x="220" y="110" width="250" height="300" rx="12" fill="#1e293b" stroke="#334155"
-                            stroke-width="1" />
-                        <text x="240" y="145" fill="#94a3b8" font-family="sans-serif" font-size="14"
-                            text-transform="uppercase" letter-spacing="1">AI Readiness</text>
-
-                        <!-- Donut Base -->
-                        <circle cx="345" cy="240" r="70" fill="none" stroke="#0f172a" stroke-width="20" />
-                        <!-- Donut Progress (85% of circumference 440 = 374) -->
-                        <circle cx="345" cy="240" r="70" fill="none" stroke="#14b8a6" stroke-width="20"
-                            stroke-dasharray="374 440" transform="rotate(-90 345 240)" stroke-linecap="round" />
-
-                        <!-- Donut Text -->
-                        <text x="345" y="235" fill="#f8fafc" font-family="sans-serif" font-size="28"
-                            text-anchor="middle">85%</text>
-                        <text x="345" y="260" fill="#14b8a6" font-family="sans-serif" font-size="14"
-                            text-anchor="middle">Optimized</text>
-
-                        <!-- Widget 2: Configurable Options -->
-                        <rect x="490" y="110" width="270" height="300" rx="12" fill="#1e293b" stroke="#334155"
-                            stroke-width="1" />
-                        <text x="510" y="145" fill="#94a3b8" font-family="sans-serif" font-size="14"
-                            text-transform="uppercase" letter-spacing="1">Global Injection</text>
-
-                        <!-- Toggle 1 -->
-                        <rect x="510" y="180" width="230" height="50" rx="8" fill="#0f172a" />
-                        <text x="525" y="210" fill="#e2e8f0" font-family="sans-serif" font-size="13">Auto-Inject HTML
-                            Headers</text>
-                        <rect x="690" y="193" width="36" height="20" rx="10" fill="#14b8a6" />
-                        <circle cx="716" cy="203" r="7" fill="#ffffff" />
-
-                        <!-- Toggle 2 -->
-                        <rect x="510" y="240" width="230" height="50" rx="8" fill="#0f172a" />
-                        <text x="525" y="270" fill="#e2e8f0" font-family="sans-serif" font-size="13">Enable API
-                            Pipeline</text>
-                        <rect x="690" y="253" width="36" height="20" rx="10" fill="#14b8a6" />
-                        <circle cx="716" cy="263" r="7" fill="#ffffff" />
-
-                        <!-- Toggle 3 -->
-                        <rect x="510" y="300" width="230" height="50" rx="8" fill="#0f172a" />
-                        <text x="525" y="330" fill="#e2e8f0" font-family="sans-serif" font-size="13">Map Complex
-                            CPTs</text>
-                        <rect x="690" y="313" width="36" height="20" rx="10" fill="#14b8a6" />
-                        <circle cx="716" cy="323" r="7" fill="#ffffff" />
-                    </svg>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <!-- Icon and Header Inline -->
-                    <div class="flex items-center mb-6">
+                    <!-- Card 4 -->
+                    <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
                         <div
-                            class="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 mr-4 flex-shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+                            class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-pink-400 group-hover:shadow-[0_0_20px_rgba(244,114,182,0.3)] transition-all">
+                            <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-normal text-white">4. The AI Command Center</h3>
+                        <h3 class="text-xl font-bold text-white mb-3">OpenAPI Specs</h3>
+                        <p class="text-slate-400 leading-relaxed">Generates a static <code>openapi.json</code> file to
+                            seamlessly connect your private Custom GPTs.</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <p class="text-slate-400 text-lg mb-6">You don't need to be a developer to build an enterprise data
-                        pipeline. The Pro dashboard gives you total visual control over your AI SEO strategy directly
-                        from WordPress.</p>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
+
+        <!-- Problem & Solution Section -->
+        <section id="features" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-8 items-stretch">
+
+                    <!-- The Problem -->
+                    <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
+                        <div
+                            class="absolute -right-10 -top-10 w-40 h-40 bg-red-500/10 rounded-full blur-3xl group-hover:bg-red-500/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                    clip-rule="evenodd"></path>
                             </svg>
-                            <span>Automated Frontend Injection: Seamlessly drops the required AI discovery tags into
-                                your site's HTML header. Zero coding required, and it never breaks your visual
-                                theme.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Legacy SEO is visually noisy.</h2>
+                        <p class="text-slate-400 leading-relaxed mb-4 text-lg">
+                            Legacy plugins inject meta tags for humans. But modern AI agents don't care about your CSS,
+                            pop-ups, or sidebar widgets.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed text-lg">
+                            When an AI hits a standard webpage, it struggles to separate the 2% of actual data from the
+                            98%
+                            of visual noise. If it can't parse your data cleanly, it cites your competitor.
+                        </p>
+                    </div>
+
+                    <!-- The Solution -->
+                    <div class="glass-card p-10 rounded-3xl relative overflow-hidden group border-brand-teal/30">
+                        <div
+                            class="absolute -right-10 -top-10 w-40 h-40 bg-brand-teal/10 rounded-full blur-3xl group-hover:bg-brand-teal/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-brand-teal/10 border border-brand-teal/30 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+                            <svg class="w-7 h-7 text-brand-teal" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
                             </svg>
-                            <span>Visual Health Dashboard: Monitor your exact AI readiness score with real-time donut
-                                charts that calculate your total Knowledge Graph coverage and validation status.</span>
-                        </li>
-                    </ul>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Enter LLMO (Large Language Model Optimization).
+                        </h2>
+                        <p class="text-slate-400 leading-relaxed mb-8 text-lg">
+                            Agentic Markup Pro bypasses your frontend theme entirely, creating a dedicated REST API
+                            pipeline
+                            straight from your database to the AI crawlers.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
+                                <span class="text-brand-teal font-mono mr-3 mt-0.5">01</span>
+                                <span class="text-slate-300"><strong>100% Data Signal:</strong> Pure, perfectly
+                                    structured
+                                    JSON-LD.</span>
+                            </li>
+                            <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
+                                <span class="text-brand-teal font-mono mr-3 mt-0.5">02</span>
+                                <span class="text-slate-300"><strong>Immune to Page Builders:</strong> Caching won't
+                                    stop
+                                    bots.</span>
+                            </li>
+                            <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
+                                <span class="text-brand-teal font-mono mr-3 mt-0.5">03</span>
+                                <span class="text-slate-300"><strong>Built for Tool Calling:</strong> Connect to Custom
+                                    GPTs
+                                    easily.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- Discovery Architecture -->
-    <section id="discovery" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl text-white mb-6">The Omni-Channel Discovery Engine</h2>
-                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
-                    We don't just build the API; we guarantee that AI agents find it. Agentic Markup Pro utilizes a
-                    4-pillar architecture to alert passing crawlers.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-brand-blue group-hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all">
-                        <span class="text-brand-blue font-mono font-bold text-xl">&lt;/&gt;</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Frontend HTML</h3>
-                    <p class="text-slate-400 leading-relaxed">Injects <code>&lt;link rel="alternate"&gt;</code> tags so
-                        open-web bots instantly route to your JSON feed.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-brand-teal group-hover:shadow-[0_0_20px_rgba(20,184,166,0.3)] transition-all">
-                        <svg class="w-7 h-7 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">llms.txt Standard</h3>
-                    <p class="text-slate-400 leading-relaxed">Automatically generates the emerging
-                        <code>/llms.txt</code> file at your root domain to instruct AI agents.
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-purple-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all">
-                        <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">robots.txt Directives</h3>
-                    <p class="text-slate-400 leading-relaxed">Injects automated sitemap indexing rules specifically
-                        tailored for your API endpoints.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-600 flex items-center justify-center mb-6 group-hover:border-pink-400 group-hover:shadow-[0_0_20px_rgba(244,114,182,0.3)] transition-all">
-                        <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">OpenAPI Specs</h3>
-                    <p class="text-slate-400 leading-relaxed">Generates a static <code>openapi.json</code> file to
-                        seamlessly connect your private Custom GPTs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Problem & Solution Section -->
-    <section id="features" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 items-stretch">
-
-                <!-- The Problem -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-                    <div
-                        class="absolute -right-10 -top-10 w-40 h-40 bg-red-500/10 rounded-full blur-3xl group-hover:bg-red-500/20 transition-all duration-500">
-                    </div>
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-red-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-3xl font-bold text-white mb-4">Legacy SEO is visually noisy.</h2>
-                    <p class="text-slate-400 leading-relaxed mb-4 text-lg">
-                        Legacy plugins inject meta tags for humans. But modern AI agents don't care about your CSS,
-                        pop-ups, or sidebar widgets.
-                    </p>
-                    <p class="text-slate-400 leading-relaxed text-lg">
-                        When an AI hits a standard webpage, it struggles to separate the 2% of actual data from the 98%
-                        of visual noise. If it can't parse your data cleanly, it cites your competitor.
-                    </p>
+        <!-- Compare Matrix -->
+        <section id="compare" class="py-24 relative border-t border-white/5">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl  text-white tracking-tight">Unlock the Enterprise Pipeline</h2>
+                    <p class="mt-4 text-xl text-slate-400">See why agencies choose Agentic Markup Pro.</p>
                 </div>
 
-                <!-- The Solution -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group border-brand-teal/30">
+                <div class="glass-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+                    <!-- Subtle glow behind the table -->
                     <div
-                        class="absolute -right-10 -top-10 w-40 h-40 bg-brand-teal/10 rounded-full blur-3xl group-hover:bg-brand-teal/20 transition-all duration-500">
+                        class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-brand-teal/5 to-transparent pointer-events-none">
                     </div>
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-brand-teal/10 border border-brand-teal/30 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
-                        <svg class="w-7 h-7 text-brand-teal" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-3xl font-bold text-white mb-4">Enter LLMO (Large Language Model Optimization).</h2>
-                    <p class="text-slate-400 leading-relaxed mb-8 text-lg">
-                        Agentic Markup Pro bypasses your frontend theme entirely, creating a dedicated REST API pipeline
-                        straight from your database to the AI crawlers.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
-                            <span class="text-brand-teal font-mono mr-3 mt-0.5">01</span>
-                            <span class="text-slate-300"><strong>100% Data Signal:</strong> Pure, perfectly structured
-                                JSON-LD.</span>
-                        </li>
-                        <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
-                            <span class="text-brand-teal font-mono mr-3 mt-0.5">02</span>
-                            <span class="text-slate-300"><strong>Immune to Page Builders:</strong> Caching won't stop
-                                bots.</span>
-                        </li>
-                        <li class="flex items-start bg-slate-800/30 p-3 rounded-lg border border-white/5">
-                            <span class="text-brand-teal font-mono mr-3 mt-0.5">03</span>
-                            <span class="text-slate-300"><strong>Built for Tool Calling:</strong> Connect to Custom GPTs
-                                easily.</span>
-                        </li>
-                    </ul>
+
+                    <table class="w-full text-left border-collapse relative z-10">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="p-6 md:p-8 font-semibold text-white text-lg w-1/2">Features</th>
+                                <th class="p-6 md:p-8 font-semibold text-slate-400 text-center border-l border-white/5">
+                                    Free
+                                    Version</th>
+                                <th class="p-6 md:p-8 text-center border-l border-white/10 bg-brand-teal/10">
+                                    <span
+                                        class="inline-block bg-gradient-to-r from-brand-blue to-brand-teal text-transparent bg-clip-text font-extrabold text-2xl">PRO</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-white/[0.02] transition">
+                                <td class="p-5 md:px-8 text-slate-300 font-medium">Standard Posts/Pages Schema</td>
+                                <td class="p-5 text-center text-slate-500"><span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition">
+                                <td class="p-5 md:px-8 text-slate-300 font-medium">Automated Entity Linking</td>
+                                <td class="p-5 text-center text-slate-500"><span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold flex items-center gap-2">
+                                    Dedicated AI REST API Feed <span
+                                        class="bg-brand-blue/20 text-brand-blue text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">Crucial</span>
+                                </td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold">Custom Post Type (CPT) Support</td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold">WooCommerce Product Engine</td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold">Advanced Custom Fields (ACF) UI</td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold"><code>llms.txt</code> Auto-Generation
+                                </td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition group">
+                                <td class="p-5 md:px-8 text-white font-semibold">OpenAPI Spec for Custom GPTs</td>
+                                <td class="p-5 text-center text-slate-600">❌</td>
+                                <td
+                                    class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
+                                    <span
+                                        class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Compare Matrix -->
-    <section id="compare" class="py-24 relative border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl  text-white tracking-tight">Unlock the Enterprise Pipeline</h2>
-                <p class="mt-4 text-xl text-slate-400">See why agencies choose Agentic Markup Pro.</p>
-            </div>
 
-            <div class="glass-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-                <!-- Subtle glow behind the table -->
+
+        <!-- Developer Docs Teaser -->
+        <section id="docs"
+            class="py-24 relative border-t border-white/5 bg-gradient-to-b from-transparent to-slate-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Developer-Friendly Architecture</h2>
+                <p class="text-lg text-slate-400 mb-10">Built on strict WordPress core standards. Zero bloat. 100%
+                    GPL-compliant.</p>
+
                 <div
-                    class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-brand-teal/5 to-transparent pointer-events-none">
+                    class="bg-[#0D1117] rounded-xl border border-slate-800 p-6 text-left font-mono text-sm shadow-2xl inline-block max-w-full overflow-x-auto">
+                    <div class="text-slate-300 mb-2"># Fetch your fully mapped Custom Post Types directly from your
+                        domain
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-pink-400">GET</span>
+                        <span class="text-green-400">https://yourdomain.com/wp-json/agentic-markup/v1/feed?page=1</span>
+                    </div>
                 </div>
 
-                <table class="w-full text-left border-collapse relative z-10">
-                    <thead>
-                        <tr class="border-b border-white/10">
-                            <th class="p-6 md:p-8 font-semibold text-white text-lg w-1/2">Features</th>
-                            <th class="p-6 md:p-8 font-semibold text-slate-400 text-center border-l border-white/5">Free
-                                Version</th>
-                            <th class="p-6 md:p-8 text-center border-l border-white/10 bg-brand-teal/10">
-                                <span
-                                    class="inline-block bg-gradient-to-r from-brand-blue to-brand-teal text-transparent bg-clip-text font-extrabold text-2xl">PRO</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-white/5">
-                        <tr class="hover:bg-white/[0.02] transition">
-                            <td class="p-5 md:px-8 text-slate-300 font-medium">Standard Posts/Pages Schema</td>
-                            <td class="p-5 text-center text-slate-500"><span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition">
-                            <td class="p-5 md:px-8 text-slate-300 font-medium">Automated Entity Linking</td>
-                            <td class="p-5 text-center text-slate-500"><span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold flex items-center gap-2">
-                                Dedicated AI REST API Feed <span
-                                    class="bg-brand-blue/20 text-brand-blue text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">Crucial</span>
-                            </td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold">Custom Post Type (CPT) Support</td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold">WooCommerce Product Engine</td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold">Advanced Custom Fields (ACF) UI</td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold"><code>llms.txt</code> Auto-Generation</td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-white/[0.02] transition group">
-                            <td class="p-5 md:px-8 text-white font-semibold">OpenAPI Spec for Custom GPTs</td>
-                            <td class="p-5 text-center text-slate-600">❌</td>
-                            <td class="p-5 text-center bg-brand-teal/[0.05] group-hover:bg-brand-teal/[0.1] transition">
-                                <span
-                                    class="text-brand-teal font-bold text-xl drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]">✓</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Developer Docs Teaser -->
-    <section id="docs" class="py-24 relative border-t border-white/5 bg-gradient-to-b from-transparent to-slate-950">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Developer-Friendly Architecture</h2>
-            <p class="text-lg text-slate-400 mb-10">Built on strict WordPress core standards. Zero bloat. 100%
-                GPL-compliant.</p>
-
-            <div
-                class="bg-[#0D1117] rounded-xl border border-slate-800 p-6 text-left font-mono text-sm shadow-2xl inline-block max-w-full overflow-x-auto">
-                <div class="text-slate-500 mb-2"># Fetch your fully mapped Custom Post Types directly from your domain
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="text-pink-400">GET</span>
-                    <span class="text-green-400">https://yourdomain.com/wp-json/agentic-markup/v1/feed?page=1</span>
+                <div class="mt-12">
+                    <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
+                        class="text-brand-teal hover:text-white font-semibold flex items-center justify-center gap-2 transition-colors">
+                        Get Pro Now
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-
-            <div class="mt-12">
-                <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
-                    class="text-brand-teal hover:text-white font-semibold flex items-center justify-center gap-2 transition-colors">
-                    Get Pro Now
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="bg-slate-950 py-12 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -992,7 +1032,7 @@
             </div>
             <a href="mailto:support@agenticmarkup.com"
                 class="text-slate-400 hover:text-white transition-colors text-sm font-medium mb-6">support@agenticmarkup.com</a>
-            <p class="text-slate-600 text-sm font-medium">© 2026 Agentic Markup. The future of AI Content Structuring.
+            <p class="text-slate-400 text-sm font-medium">© 2026 Agentic Markup. The future of AI Content Structuring.
             </p>
         </div>
     </footer>
