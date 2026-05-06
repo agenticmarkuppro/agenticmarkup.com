@@ -94,17 +94,78 @@
 
 <body class="bg-brand-dark text-slate-300 font-sans antialiased">
 
-    <!-- Simple Navbar -->
-    <nav class="border-b border-white/5 bg-brand-dark/80 backdrop-blur-md p-6">
-        <div class="max-w-3xl mx-auto flex justify-between items-center">
-            <a href="/" class="text-white font-bold text-xl hover:text-brand-teal transition">Agentic Markup <span
-                    class="text-brand-teal">Pro</span></a>
-            <a href="./index.html" class="text-sm text-slate-300 hover:text-white transition">&larr; Back to Blog</a>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="group flex items-center gap-4 cursor-pointer select-none">
+                    <div
+                        class="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-blue via-sky-400 to-brand-teal p-[2px] shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_42px_rgba(20,184,166,0.5)]">
+                        <div
+                            class="w-full h-full bg-brand-dark rounded-[14px] border border-white/15 flex items-center justify-center backdrop-blur-sm p-0 overflow-hidden">
+                            <img src="/logo.webp" alt="Agentic Markup Pro logo"
+                                class="w-full h-full object-contain rounded-md drop-shadow-[0_0_10px_rgba(20,184,166,0.45)]">
+                        </div>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="text-white font-extrabold text-2xl tracking-tight">Agentic Markup </span>
+                        <span
+                            class="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">Pro</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="https://agenticmarkup.com/#how-it-works"
+                        class="text-slate-300 hover:text-white transition text-sm font-medium">How It Works</a>
+                    <a href="https://agenticmarkup.com/#features"
+                        class="text-slate-300 hover:text-white transition text-sm font-medium">Features</a>
+                    <a href="https://agenticmarkup.com/#compare"
+                        class="text-slate-300 hover:text-white transition text-sm font-medium">Compare</a>
+                    <a href="https://agenticmarkup.com/#discovery"
+                        class="text-slate-300 hover:text-white transition text-sm font-medium">Discovery</a>
+                    <a href="/blog/" class="text-slate-300 hover:text-white transition text-sm font-medium">Blog</a>
+                    <a href="mailto:support@agenticmarkup.com"
+                        class="text-slate-300 hover:text-white transition text-sm font-medium">Contact</a>
+                    <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
+                        class="bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold py-2 px-5 rounded-full transition-all duration-300">Get
+                        Pro</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-slate-300 hover:text-white focus:outline-none transition-colors"
+                        aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute w-full top-20 left-0 bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all duration-300 flex flex-col items-center py-8 space-y-6">
+            <a href="https://agenticmarkup.com/#how-it-works"
+                class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">How It Works</a>
+            <a href="https://agenticmarkup.com/#features"
+                class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">Features</a>
+            <a href="https://agenticmarkup.com/#compare"
+                class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">Compare</a>
+            <a href="https://agenticmarkup.com/#discovery"
+                class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">Discovery</a>
+            <a href="/blog/" class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">Blog</a>
+            <a href="mailto:support@agenticmarkup.com"
+                class="mobile-link text-slate-300 hover:text-white transition text-lg font-medium">Contact</a>
+            <a href="https://checkout.freemius.com/plugin/28719/plan/47260/?ref=agenticmarkup"
+                class="mobile-link bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 mt-4">Get
+                Pro</a>
         </div>
     </nav>
 
     <!-- Article Container -->
-    <main class="max-w-3xl mx-auto px-6 py-16">
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-16">
         <header class="mb-12">
             <div class="text-brand-teal font-semibold tracking-wider uppercase text-sm mb-4">AI SEO Strategy</div>
             <h1 class="text-4xl md:text-5xl text-white leading-tight mb-6">Why Your WordPress Page Builder is Blocking
@@ -182,6 +243,56 @@
             </div>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <div
+                    class="w-8 h-8 rounded shrink-0 bg-gradient-to-br from-brand-blue to-brand-teal flex items-center justify-center p-0.5">
+                    <div class="w-full h-full bg-slate-950 rounded-[3px] flex items-center justify-center">
+                        <img src="/logo.webp" alt="Agentic Markup Pro logo"
+                            class="w-full h-full object-contain rounded-md drop-shadow-[0_0_10px_rgba(20,184,166,0.45)]">
+                    </div>
+                </div>
+                <span class="text-white font-bold text-xl tracking-tight">Agentic Markup <span
+                        class="text-brand-teal">Pro</span></span>
+            </div>
+            <a href="mailto:support@agenticmarkup.com"
+                class="text-slate-400 hover:text-white transition-colors text-sm font-medium mb-6">support@agenticmarkup.com</a>
+            <p class="text-slate-400 text-sm font-medium">© 2026 Agentic Markup. The future of AI Content Structuring.
+            </p>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconPath = document.getElementById('menu-icon-path');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            }
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        });
+    </script>
 
 </body>
 
